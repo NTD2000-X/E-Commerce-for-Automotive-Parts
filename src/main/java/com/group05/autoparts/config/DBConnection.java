@@ -25,4 +25,15 @@ public class DBConnection {
                 props.getProperty("db.password")
         );
     }
+    public static void main(String[] args) {
+        try (Connection conn = getConnection()) {
+            if (conn != null) {
+                System.out.println("Database connection successful!");
+                System.out.println("Catalog hiện tại: " + conn.getCatalog());
+            }
+        } catch (Exception e) {
+            System.err.println("Connection failed!");
+            e.printStackTrace();
+        }
+    }
 }
