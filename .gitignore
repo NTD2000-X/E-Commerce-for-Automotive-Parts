@@ -1,1 +1,10 @@
-db.properties
+# Compiled Maven & Java class files
+target/
+*.class
+
+# IDE & OS metadata
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

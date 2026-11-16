@@ -29,7 +29,7 @@ public class DBConnection {
         try (Connection conn = getConnection()) {
             if (conn != null) {
                 System.out.println("Database connection successful!");
-                System.out.println("Catalog hiện tại: " + conn.getCatalog());
+                System.out.println("Current catalog: " + conn.getCatalog());
             }
         } catch (Exception e) {
             System.err.println("Connection failed!");

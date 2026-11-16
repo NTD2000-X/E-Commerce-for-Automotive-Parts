@@ -39,6 +39,7 @@ public class BrowsePanel extends JPanel {
         table.setFillsViewportHeight(true);
         add(new JScrollPane(table), BorderLayout.CENTER);
 
+        cboTables.addActionListener(e -> loadTableData());
         btnRefresh.addActionListener(e -> loadTableData());
 
         loadTableData();
