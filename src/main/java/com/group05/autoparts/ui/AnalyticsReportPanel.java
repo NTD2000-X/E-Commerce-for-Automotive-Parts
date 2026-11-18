@@ -3,7 +3,6 @@ import com.group05.autoparts.config.DBConnection;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.io.IOException;
 import java.sql.*;
 import java.util.Vector;
 public class AnalyticsReportPanel extends JPanel {
@@ -204,7 +203,7 @@ public class AnalyticsReportPanel extends JPanel {
                 displayResultSet(resultSet);
                 statusLabel.setText("Completed: " + title);
             }
-        } catch (SQLException | IOException exception) {
+        } catch (SQLException exception) {
             resultsTable.setModel(createEmptyModel());
             rowCountLabel.setText("Rows loaded: 0");
             statusLabel.setText("Query failed. Check the database connection and schema.");

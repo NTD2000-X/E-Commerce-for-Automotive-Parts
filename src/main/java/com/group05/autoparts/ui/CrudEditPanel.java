@@ -4,7 +4,6 @@ import com.group05.autoparts.config.DBConnection;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.Date;
@@ -476,13 +475,6 @@ public class CrudEditPanel extends JPanel {
             action.run(conn);
         } catch (SQLException ex) {
             showDatabaseError(ex);
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(
-                    this,
-                    "Unable to read database settings. Check db.properties.",
-                    "Database Configuration Error",
-                    JOptionPane.ERROR_MESSAGE
-            );
         }
     }
 
